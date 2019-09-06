@@ -25,7 +25,7 @@ const url = config.mongoUrl;
 // const url = process.env.MONGO_URI;
 // console.log("URL: " + url);
 
-const connect = mongoose.connect(url);
+const connect = mongoose.connect(url, { useNewUrlParser: true });
 
 connect.then((db) => {
   console.log("Connected correctly to server!!!");
