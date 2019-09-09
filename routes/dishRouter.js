@@ -10,11 +10,6 @@ dishRouter.use(bodyParser.json());
 
 // api's for all dishes
 dishRouter.route('/')
-.all((req,res,next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
-})
 .get((req,res,next) => {
     Dishes.find({})
     .populate('comments.author')

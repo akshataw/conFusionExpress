@@ -10,11 +10,6 @@ leaderRouter.use(bodyParser.json());
 
 // api's for all leaders data
 leaderRouter.route('/')
-.all((req,res,next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
-})
 .get((req,res,next) => {
     Leaders.find({})
     .then((leaders) => {
