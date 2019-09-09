@@ -13,7 +13,7 @@ var fs = require('fs');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3003');
+var port = normalizePort(process.env.PORT || '3006');
 app.set('port', port);
 app.set('secPort', port+443);  // secure port
 
@@ -64,7 +64,7 @@ function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * Event listener for HTTP server and HTTPS Secure server "error" event.
  */
 
 function onError(error) {
@@ -92,7 +92,7 @@ function onError(error) {
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * Event listener for HTTP server and HTTPS Secure server "listening" event.
  */
 
 function onListening() {
