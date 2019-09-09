@@ -1,5 +1,5 @@
-node_modules
-config.js
-bin/cert.csr
-bin/certificate.pem
-bin/private.key
+/node_modules
+/config.js
+/bin/cert.csr
+/bin/certificate.pem
+/bin/private.key
